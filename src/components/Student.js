@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "@mui/material/Button";
+import Avatar from "@mui/material/Avatar";
 
 export default function Student({
   student,
@@ -10,45 +12,51 @@ export default function Student({
   return (
     <div className="studentCard">
       <h3>{student.name}</h3>
-      <img className="student-pic" src={student.img} alt="" />
+      <Avatar
+        className="student-pic"
+        src={student.img}
+        alt=""
+        sx={{ width: 130, height: 130 }}
+      />
       <div>
-
         {/* {if this thing is true, do this code otherwise return null} */}
         {student?.team === "default" && (
           <>
-            <button
-              className="button-24"
+            <Button
               name="bccrew"
               onClick={(e) => moveStudentToTeam(student, e.target.name)}
+              variant="contained"
             >
               BC Crew
-            </button>
-            <button
+            </Button>
+
+            <Button
               onClick={(e) => moveStudentToTeam(student, e.target.name)}
-              className="button-24"
+              color="success"
+              variant="contained"
               name="binarybots"
             >
               Binary Bots
-            </button>
+            </Button>
           </>
         )}
         {student?.team === "bccrew" && (
-          <button
+          <Button
             onClick={(e) => moveStudentToTeam(student, e.target.name)}
-            className="button-24"
             name="binarybots"
+            variant="contained"
           >
             Binary Bots
-          </button>
+          </Button>
         )}
         {student?.team === "binarybots" && (
-          <button
-            className="button-24"
+          <Button
             name="bccrew"
+            variant="contained"
             onClick={(e) => moveStudentToTeam(student, e.target.name)}
           >
             BC Crew
-          </button>
+          </Button>
         )}
       </div>
     </div>

@@ -1,5 +1,6 @@
 import "./App.css";
 import MainContainer from "./components/MainContainer";
+import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import adam from "./assets/adam.png";
 import corey from "./assets/corey.png";
@@ -55,6 +56,7 @@ function App() {
       <button className="button-24" onClick={reset}>
         Reset
       </button>
+      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <div className="App">
         <MainContainer
           students={students}
