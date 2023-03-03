@@ -12,6 +12,8 @@ export default function Student({
       <h3>{student.name}</h3>
       <img className="student-pic" src={student.img} alt="" />
       <div>
+
+        {/* {if this thing is true, do this code otherwise return null} */}
         {student?.team === "default" && (
           <>
             <button
