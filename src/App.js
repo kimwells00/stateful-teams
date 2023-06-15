@@ -1,17 +1,17 @@
 import "./App.css";
 import MainContainer from "./components/MainContainer";
 import { useState } from "react";
-import ciara from "./assets/ciara.png";
-import jason from "./assets/jason.png";
-import rayleigh from "./assets/rayleigh.png";
-import santos from "./assets/santos.png";
+import dustin from "./assets/dustin.png";
+import daniel from "./assets/daniel.jpeg";
+import max from "./assets/max.jpg";
+import justin from "./assets/justin.png";
 
 function App() {
   const studentData = [
-    { name: "Ciara", img: ciara },
-    { name: "Rayleigh", img: rayleigh },
-    { name: "Santos", img: santos },
-    { name: "Jason", img: jason },
+    { name: "dustin", img: dustin },
+    { name: "daniel", img: daniel },
+    { name: "max", img: max },
+    { name: "justin", img: justin },
   ];
   const [students, setStudents] = useState(studentData);
   return (
