@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="topcontainer">
       <h1>Student Team React Challenge</h1>
-      <button className="button-reset" onClick={resetArrays}>
+      <button className="resetButton" onClick={resetArrays}>
         Reset
       </button>
       <div className="App">
